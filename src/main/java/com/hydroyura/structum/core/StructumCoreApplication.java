@@ -1,4 +1,4 @@
-package com.hydroyura.structum_core;
+package com.hydroyura.structum.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
