@@ -13,24 +13,24 @@ import java.util.Optional;
 //@ConditionalOnMissingBean(value = MaterialRepository.class)
 public class MaterialInMemoryRepository implements MaterialRepository {
 
-    public static final List<Material> materials = new ArrayList<>();
+    public static final List<Material> storage = new ArrayList<>();
 
 
     @Override
     public Optional<Material> findByNumber(String number) {
-        return materials.stream().filter(m -> number.equals(m.getNumber())).findFirst();
+        return storage.stream().filter(m -> number.equals(m.getNumber())).findFirst();
     }
 
     @Override
     public Material save(Material material) {
-        var nextId = materials
+        var nextId = storage
                 .stream()
                 .map(Material::getId)
                 .map(MaterialId::id)
                 .max(Long::compareTo)
-                .orElse(1L);
-        var newMaterial = Material.create(material, nextId);
-        materials.add(newMaterial);
+                .orElse(0L);
+        var newMaterial = Material.create(material, nextId + 1L);
+        storage.add(newMaterial);
         return newMaterial;
     }
 }

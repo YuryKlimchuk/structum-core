@@ -1,7 +1,5 @@
 package com.hydroyura.structum.core.dictionary.infra.event.publish;
 
-import com.hydroyura.structum.core.shared.event.Event;
-import com.hydroyura.structum.core.shared.event.EventPublisher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

@@ -3,8 +3,7 @@ package com.hydroyura.structum.core.dictionary.application.material.create;
 import com.hydroyura.structum.core.dictionary.domain.event.MaterialCreatedEvent;
 import com.hydroyura.structum.core.dictionary.domain.material.Material;
 import com.hydroyura.structum.core.dictionary.domain.material.MaterialRepository;
-import com.hydroyura.structum.core.dictionary.domain.material.specification.UniqueMaterialNumberRule;
-import com.hydroyura.structum.core.shared.event.EventPublisher;
+import com.hydroyura.structum.core.dictionary.domain.material.specification.UniqueMaterialNumberBusinessRule;
 import com.hydroyura.structum.core.shared.exception.BusinessRuleException;
 import com.hydroyura.structum.core.shared.usecase.CommandUseCase;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +16,7 @@ public class CreateMaterialUseCase implements CommandUseCase<CreateMaterialComma
 
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final MaterialRepository repository;
-    private final UniqueMaterialNumberRule uniqueMaterialNumberRule;
+    private final UniqueMaterialNumberBusinessRule uniqueMaterialNumberRule;
     private final EventPublisher eventPublisher;
 
     @Override

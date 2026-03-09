@@ -1,4 +1,4 @@
-package com.hydroyura.structum.core.engineering.domain.shared;
+package com.hydroyura.structum.core.engineering.domain.part;
 
 public enum PartType {
 
