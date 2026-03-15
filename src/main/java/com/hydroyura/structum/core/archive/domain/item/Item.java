@@ -6,6 +6,7 @@ import com.hydroyura.structum.core.shared.exception.BusinessRuleException;
 import com.hydroyura.structum.core.shared.exception.FieldValidationException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.jmolecules.ddd.annotation.Entity;
 import org.jmolecules.ddd.annotation.Identity;
 
 import java.time.Instant;
@@ -14,6 +15,7 @@ import java.util.regex.Pattern;
 import static com.hydroyura.structum.core.archive.domain.enums.Status.DESIGN;
 import static com.hydroyura.structum.core.archive.domain.enums.Status.TRANSIENT;
 
+@Entity
 @AllArgsConstructor
 public class Item {
 
